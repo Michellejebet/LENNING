@@ -22,18 +22,35 @@
       </div>
     </div>
     <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Loans</a>
-      <a href="#">Chama</a>
-      <a href="#">M-Pesa</a>
-      <a href="#">Contact</a>
-      <a href="#" class="btn-gold"><i class="fas fa-hand-holding-heart"></i> Apply</a>
+      <a href="#home">Home</a>
+      <a href="#loan-application">Loans</a>
+      <a href="#services">Chama</a>
+      <a href="#mpesa">M-Pesa</a>
+      <a href="#contact">Contact</a>
+      <a href="#loan-application" class="btn-gold"><i class="fas fa-hand-holding-heart"></i> Apply</a>
     </nav>
     <div class="mobile-menu-icon"><i class="fas fa-bars"></i></div>
   </div>
 </header>
 
-<section class="hero">
+<!-- Mobile Menu -->
+<div class="overlay" id="overlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <h3>Vinnie Lening</h3>
+    <div class="close-menu" id="closeMenu"><i class="fas fa-times"></i></div>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="#home">Home</a>
+    <a href="#loan-application">Loans</a>
+    <a href="#services">Chama</a>
+    <a href="#mpesa">M-Pesa</a>
+    <a href="#contact">Contact</a>
+    <a href="#loan-application" class="btn-gold"><i class="fas fa-hand-holding-heart"></i> Apply Now</a>
+  </div>
+</div>
+
+<section class="hero" id="home">
   <div class="container hero-grid">
     <div>
       <h2>Pesa <span> pap </span>?<br>Vinnie Lening ndio solution</h2>
@@ -50,7 +67,7 @@
 </section>
 
 <!-- DETAILED KENYA-FOCUSED SERVICES -->
-<section class="services">
+<section class="services" id="services">
   <div class="container">
     <h2 class="section-title">Tailored for <span>Kenyans</span> — kila sector</h2>
     <div class="services-grid">
@@ -99,7 +116,7 @@
 </section>
 
 <!-- M-PESA DEDICATED SECTION (very Kenyan) -->
-<section class="mpesa-banner">
+<section class="mpesa-banner" id="mpesa">
   <div class="container mpesa-grid">
     <div class="mpesa-info">
       <h2><span class="section-title" style="margin-bottom:0;">M-Pesa<span> ni nyumbani</span></span></h2>
@@ -179,6 +196,185 @@
   </div>
 </section>
 
+<!-- LOAN APPLICATION SECTION -->
+<section class="loan-application" id="loan-application">
+  <div class="container">
+    <h2 class="section-title">Apply for a <span>Loan</span></h2>
+    <p class="section-subtitle">Choose your loan type and get instant approval</p>
+    
+    <!-- Loan Type Selection -->
+    <div class="loan-types-grid">
+      <div class="loan-type-card" data-loan-type="emergency">
+        <div class="loan-icon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h3>Emergency Loan</h3>
+        <p>Quick cash for urgent needs - medical bills, repairs, unexpected expenses</p>
+        <ul class="loan-features">
+          <li><i class="fas fa-check"></i> Up to 50,000 KES</li>
+          <li><i class="fas fa-check"></i> 5 minutes approval</li>
+          <li><i class="fas fa-check"></i> Flexible repayment</li>
+        </ul>
+        <button class="select-loan-btn" data-loan="emergency">Select This Loan</button>
+      </div>
+      
+      <div class="loan-type-card" data-loan-type="salary">
+        <div class="loan-icon">
+          <i class="fas fa-money-bill-wave"></i>
+        </div>
+        <h3>Salary Advance</h3>
+        <p>Get your salary before payday - bridge your cash flow needs</p>
+        <ul class="loan-features">
+          <li><i class="fas fa-check"></i> Up to 70% of salary</li>
+          <li><i class="fas fa-check"></i> Auto-deduct on payday</li>
+          <li><i class="fas fa-check"></i> Low interest rates</li>
+        </ul>
+        <button class="select-loan-btn" data-loan="salary">Select This Loan</button>
+      </div>
+      
+      <div class="loan-type-card" data-loan-type="business">
+        <div class="loan-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h3>Business Loans</h3>
+        <p>Grow your business with working capital, expansion, or inventory funding</p>
+        <ul class="loan-features">
+          <li><i class="fas fa-check"></i> 50,000 - 5,000,000 KES</li>
+          <li><i class="fas fa-check"></i> 6-24 month terms</li>
+          <li><i class="fas fa-check"></i> Collateral optional</li>
+        </ul>
+        <button class="select-loan-btn" data-loan="business">Select This Loan</button>
+      </div>
+      
+      <div class="loan-type-card" data-loan-type="chama">
+        <div class="loan-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Chama Loans</h3>
+        <p>Group loans for investment groups, table banking, and cooperatives</p>
+        <ul class="loan-features">
+          <li><i class="fas fa-check"></i> 100,000 - 10,000,000 KES</li>
+          <li><i class="fas fa-check"></i> Group guarantee system</li>
+          <li><i class="fas fa-check"></i> Special rates for groups</li>
+        </ul>
+        <button class="select-loan-btn" data-loan="chama">Select This Loan</button>
+      </div>
+      
+      <div class="loan-type-card" data-loan-type="logbook">
+        <div class="loan-icon">
+          <i class="fas fa-car"></i>
+        </div>
+        <h3>Logbook Loans</h3>
+        <p>Use your vehicle as collateral for instant cash - keep driving your car</p>
+        <ul class="loan-features">
+          <li><i class="fas fa-check"></i> Up to 80% of car value</li>
+          <li><i class="fas fa-check"></i> Same day disbursement</li>
+          <li><i class="fas fa-check"></i> Keep your vehicle</li>
+        </ul>
+        <button class="select-loan-btn" data-loan="logbook">Select This Loan</button>
+      </div>
+    </div>
+    
+    <!-- Loan Application Form (Hidden by default) -->
+    <div class="loan-form-container" id="loanForm" style="display: none;">
+      <div class="form-header">
+        <h3>Complete Your Application</h3>
+        <p id="selectedLoanType">Selected Loan: <span></span></p>
+      </div>
+      
+      <form class="loan-application-form" id="loanApplicationForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+          </div>
+          <div class="form-group">
+            <label for="idNumber">ID Number *</label>
+            <input type="text" id="idNumber" name="idNumber" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number *</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="loanAmount">Loan Amount (KES) *</label>
+            <input type="number" id="loanAmount" name="loanAmount" min="1000" required>
+          </div>
+          <div class="form-group">
+            <label for="loanTerm">Loan Term *</label>
+            <select id="loanTerm" name="loanTerm" required>
+              <option value="">Select Term</option>
+              <option value="1">1 Month</option>
+              <option value="3">3 Months</option>
+              <option value="6">6 Months</option>
+              <option value="12">12 Months</option>
+              <option value="24">24 Months</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="purpose">Loan Purpose *</label>
+          <textarea id="purpose" name="purpose" rows="3" required></textarea>
+        </div>
+        
+        <!-- Conditional fields based on loan type -->
+        <div id="businessFields" class="conditional-fields" style="display: none;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="businessName">Business Name *</label>
+              <input type="text" id="businessName" name="businessName">
+            </div>
+            <div class="form-group">
+              <label for="businessReg">Business Registration Number</label>
+              <input type="text" id="businessReg" name="businessReg">
+            </div>
+          </div>
+        </div>
+        
+        <div id="logbookFields" class="conditional-fields" style="display: none;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="carMake">Car Make & Model *</label>
+              <input type="text" id="carMake" name="carMake">
+            </div>
+            <div class="form-group">
+              <label for="carYear">Year of Manufacture *</label>
+              <input type="number" id="carYear" name="carYear" min="2000" max="2026">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="logbookNumber">Logbook Number *</label>
+            <input type="text" id="logbookNumber" name="logbookNumber">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="terms" name="terms" required>
+            I agree to the terms and conditions and privacy policy *
+          </label>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="back-btn" id="backToTypes">← Back to Loan Types</button>
+          <button type="submit" class="submit-loan-btn">Submit Application</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- ADDED VALUE: CHAMA / GROUP INFO -->
 <section style="background: var(--white); padding: 40px 0 70px;">
   <div class="container">
@@ -199,7 +395,7 @@
 </section>
 
 <!-- CONTACT + OFFICE HOURS, LOCATIONS -->
-<section class="contact">
+<section class="contact" id="contact">
   <div class="container contact-grid">
     <div>
       <h2 style="font-size:2.2rem;">Piga <span style="color:var(--gold);">simu</span> au usimamie</h2>
@@ -235,8 +431,182 @@
 </footer>
 
 <script>
-  // mobile simulation
-  document.querySelector('.mobile-menu-icon')?.addEventListener('click', ()=> alert('Menu: Home | Loans | M-Pesa | Chama | Contact (responsive nav)'));
+  // Mobile menu functionality
+  const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  const overlay = document.getElementById('overlay');
+  
+  function openMobileMenu() {
+    mobileMenu.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  
+  mobileMenuIcon?.addEventListener('click', openMobileMenu);
+  closeMenu?.addEventListener('click', closeMobileMenu);
+  overlay?.addEventListener('click', closeMobileMenu);
+  
+  // Close menu when clicking on links
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+  
+  // Loan application functionality
+  const loanTypeCards = document.querySelectorAll('.loan-type-card');
+  const loanForm = document.getElementById('loanForm');
+  const loanTypesGrid = document.querySelector('.loan-types-grid');
+  const selectedLoanTypeSpan = document.querySelector('#selectedLoanType span');
+  const backToTypesBtn = document.getElementById('backToTypes');
+  const loanApplicationForm = document.getElementById('loanApplicationForm');
+  const businessFields = document.getElementById('businessFields');
+  const logbookFields = document.getElementById('logbookFields');
+  
+  let selectedLoanType = '';
+  
+  // Loan type selection
+  loanTypeCards.forEach(card => {
+    card.addEventListener('click', function() {
+      const loanType = this.dataset.loanType;
+      selectLoanType(loanType);
+    });
+  });
+  
+  // Select loan buttons
+  const selectLoanBtns = document.querySelectorAll('.select-loan-btn');
+  selectLoanBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const loanType = this.dataset.loan;
+      selectLoanType(loanType);
+    });
+  });
+  
+  function selectLoanType(loanType) {
+    selectedLoanType = loanType;
+    
+    // Update selected loan type display
+    const loanTypeNames = {
+      emergency: 'Emergency Loan',
+      salary: 'Salary Advance',
+      business: 'Business Loan',
+      chama: 'Chama Loan',
+      logbook: 'Logbook Loan'
+    };
+    
+    selectedLoanTypeSpan.textContent = loanTypeNames[loanType];
+    
+    // Show/hide conditional fields
+    businessFields.style.display = loanType === 'business' ? 'block' : 'none';
+    logbookFields.style.display = loanType === 'logbook' ? 'block' : 'none';
+    
+    // Update required fields based on loan type
+    if (loanType === 'business') {
+      document.getElementById('businessName').setAttribute('required', 'required');
+    } else {
+      document.getElementById('businessName').removeAttribute('required');
+    }
+    
+    if (loanType === 'logbook') {
+      document.getElementById('carMake').setAttribute('required', 'required');
+      document.getElementById('carYear').setAttribute('required', 'required');
+      document.getElementById('logbookNumber').setAttribute('required', 'required');
+    } else {
+      document.getElementById('carMake').removeAttribute('required');
+      document.getElementById('carYear').removeAttribute('required');
+      document.getElementById('logbookNumber').removeAttribute('required');
+    }
+    
+    // Show form, hide grid
+    loanTypesGrid.style.display = 'none';
+    loanForm.style.display = 'block';
+    
+    // Scroll to form
+    setTimeout(() => {
+      loanForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+  
+  // Back to loan types
+  backToTypesBtn?.addEventListener('click', () => {
+    loanForm.style.display = 'none';
+    loanTypesGrid.style.display = 'grid';
+    selectedLoanType = '';
+    
+    // Reset form
+    loanApplicationForm.reset();
+  });
+  
+  // Form submission
+  loanApplicationForm?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    data.loanType = selectedLoanType;
+    
+    // Validate form
+    if (!validateForm(data)) {
+      return;
+    }
+    
+    // Show success message
+    alert(`Thank you for your ${selectedLoanType} application! We will contact you within 5 minutes.`);
+    
+    // Reset form
+    this.reset();
+    loanForm.style.display = 'none';
+    loanTypesGrid.style.display = 'grid';
+    selectedLoanType = '';
+  });
+  
+  function validateForm(data) {
+    // Basic validation
+    if (!data.fullName || !data.idNumber || !data.phoneNumber || !data.email) {
+      alert('Please fill in all required fields.');
+      return false;
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      alert('Please enter a valid email address.');
+      return false;
+    }
+    
+    // Phone validation (Kenyan format)
+    const phoneRegex = /^(\+254|0)?[17]\d{8}$/;
+    if (!phoneRegex.test(data.phoneNumber.replace(/\s/g, ''))) {
+      alert('Please enter a valid Kenyan phone number.');
+      return false;
+    }
+    
+    // Loan amount validation
+    if (data.loanAmount < 1000) {
+      alert('Minimum loan amount is 1,000 KES.');
+      return false;
+    }
+    
+    // Terms validation
+    if (!data.terms) {
+      alert('Please accept the terms and conditions.');
+      return false;
+    }
+    
+    return true;
+  }
+  
+  // Existing functionality
   document.querySelector('.btn-royal')?.addEventListener('click', ()=> alert('Ungependa kupiga simu? Piga *334# au tupe simu 0709123456.'));
   document.querySelector('.submit-btn')?.addEventListener('click', (e)=>{
     e.preventDefault(); alert('Asante! Tuko karibu. We shall call you within 5 minutes.');
